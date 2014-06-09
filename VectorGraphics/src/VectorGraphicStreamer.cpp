@@ -15,7 +15,8 @@ namespace VectorGraphics
 		(node.getAttributes()["closed"] == "true") ? vecGraphic.closeShape() : vecGraphic.openShape();
 		for (auto child : node.getChildren())
 		{
-			vecGraphic.addPoint(PointStreamer::fromNode(child));
+			if (child.getName().compare("Stroke")==0) vecGraphic.setStroke(StrokeStreamer::fromNode(child));
+			else vecGraphic.addPoint(PointStreamer::fromNode(child));
 		}
 		return vecGraphic;
 	}

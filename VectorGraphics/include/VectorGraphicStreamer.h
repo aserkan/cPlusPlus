@@ -3,6 +3,7 @@
 #include <sstream>
 #include "VectorGraphic.h"
 #include "PointStreamer.h"
+#include "StrokeStreamer.h"
 #include "Streamer.h"
 
 

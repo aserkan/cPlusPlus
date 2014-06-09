@@ -41,6 +41,10 @@ namespace VectorGraphics
 		{
 			return !operator==(rhs); 
 		}
+		void draw(BitmapGraphics::HCanvas hCanvas)
+		{
+			mGraphic->draw(hCanvas, mPlacementPoint);
+		}
 
 	private:
 		Point mPlacementPoint;

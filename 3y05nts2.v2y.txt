@@ -1,0 +1,50 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# Explicit paths specified without -i nor -o; assuming --only paths...
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   VectorGraphics/include/Byte.h
+#	modified:   VectorGraphics/include/Color.h
+#	modified:   VectorGraphics/include/IBitmapIterator.h
+#	modified:   VectorGraphics/include/Layer.h
+#	modified:   VectorGraphics/include/PlacedGraphic.h
+#	modified:   VectorGraphics/include/Point.h
+#	modified:   VectorGraphics/include/Scene.h
+#	modified:   VectorGraphics/include/VectorGraphic.h
+#	modified:   VectorGraphics/include/VectorGraphicStreamer.h
+#	modified:   VectorGraphics/src/Color.cpp
+#	modified:   VectorGraphics/src/Point.cpp
+#	modified:   VectorGraphics/src/VectorGraphic.cpp
+#	modified:   VectorGraphics/src/VectorGraphicStreamer.cpp
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	VectorGraphics/include/BasicCanvas.h
+#	VectorGraphics/include/BasicCanvasBitmapIterator .h
+#	VectorGraphics/include/BrightnessDecorator.h
+#	VectorGraphics/include/ColorInversionDecorator.h
+#	VectorGraphics/include/ICanvas.h
+#	VectorGraphics/include/IPen.h
+#	VectorGraphics/include/IProjector.h
+#	VectorGraphics/include/IStroke.h
+#	VectorGraphics/include/LineIterator.h
+#	VectorGraphics/include/SlashPen.h
+#	VectorGraphics/include/SlashStroke.h
+#	VectorGraphics/include/SquarePen.h
+#	VectorGraphics/include/SquareStroke.h
+#	VectorGraphics/include/StrokeStreamer.h
+#	VectorGraphics/include/WindowsBitmapFileProjector.h
+#	VectorGraphics/include/ranged_number.h
+#	VectorGraphics/src/BasicCanvas.cpp
+#	VectorGraphics/src/BasicCanvasBitmapIterator.cpp
+#	VectorGraphics/src/SlashPen.cpp
+#	VectorGraphics/src/SlashStroke.cpp
+#	VectorGraphics/src/SquarePen.cpp
+#	VectorGraphics/src/SquareStroke.cpp
+#	VectorGraphics/src/StrokeStreamer.cpp
+#	VectorGraphics/src/WindowsBitmapFileProjector.cpp
+

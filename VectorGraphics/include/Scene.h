@@ -3,6 +3,7 @@
 #include <list>
 
 #include "Layer.h"
+#include "ICanvas.h"
 
 namespace VectorGraphics
 {
@@ -70,6 +71,17 @@ namespace VectorGraphics
 		void setHeight(int height)
 		{
 			mHeight = height;
+		}
+
+		void draw(BitmapGraphics::HCanvas hCanvas)
+		{
+			if ((mHeight > hCanvas->getHeight()) || (mWidth > hCanvas->getWidth()))
+				throw std::runtime_error("draw error: scene greater than canvas");
+
+			for (auto pos = begin(); pos != end(); ++pos)
+			{
+				pos->draw(hCanvas);
+			}
 		}
 
 	private:

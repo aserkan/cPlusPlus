@@ -22,5 +22,5 @@ namespace BitmapGraphics
 	};
 
 	typedef std::shared_ptr<IBitmapIterator> HBitmapIterator;
-
+	typedef const std::shared_ptr<IBitmapIterator> const_HBitmapIterator;
 }

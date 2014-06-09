@@ -61,7 +61,13 @@ namespace VectorGraphics
 		{
 			return !operator==(rhs);
 		}
-
+		void draw(BitmapGraphics::HCanvas hCanvas)
+		{
+			for (auto pos = begin(); pos != end(); ++pos)
+			{
+				pos->draw(hCanvas);
+			}
+		}
 	private:
 		PlacedGraphicCollection mGraphics;
 		std::string mAlias;

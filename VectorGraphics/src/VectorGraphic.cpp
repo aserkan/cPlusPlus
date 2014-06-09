@@ -92,6 +92,16 @@ namespace VectorGraphics
 		return mPoints[maxYIndex].getY() - mPoints[minYIndex].getY();
 	}
 
+
+	void VectorGraphic::setStroke(BitmapGraphics::HStroke hStroke)
+	{
+		mStroke = hStroke;
+	}
+	BitmapGraphics::HStroke VectorGraphic::getStroke()
+	{
+		return mStroke;
+	}
+
 	void VectorGraphic::updateMinMax(const Point& point, int index, bool insert)
 	{
 		update(index, minXIndex, false, insert, true);
@@ -155,6 +165,19 @@ namespace VectorGraphics
 	{
 		return !operator==(rhs);
 	}
+
+	void VectorGraphic::draw(BitmapGraphics::HCanvas hCanvas, const Point& offset)
+	{
+
+		for (auto iter = mPoints.begin(); iter != mPoints.end(); iter++)
+		{
+			mStroke->createPen()->drawPoint(hCanvas, (*iter)+offset);
+
+		}
+
+
+	}
+
 
 	std::ostream& operator<<(std::ostream& os, const VectorGraphic& vg)
 	{

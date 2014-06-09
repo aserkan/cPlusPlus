@@ -8,6 +8,9 @@
 #include "Point.h"
 #include "Node.h"
 
+#include "ICanvas.h"
+#include "IStroke.h"
+
 namespace VectorGraphics
 {
 	class VectorGraphic
@@ -32,12 +35,18 @@ namespace VectorGraphics
 		int getWidth() const;
 		int getHeight() const;
 
+		void setStroke(BitmapGraphics::HStroke hStroke);
+		BitmapGraphics::HStroke getStroke();
+
 		bool operator==(const VectorGraphic& rhs) const;
 		bool operator!=(const VectorGraphic& rhs) const;
+
+		void draw(BitmapGraphics::HCanvas hCanvas, const Point& offset);
 
 		friend std::ostream& operator<<(std::ostream& os, const VectorGraphic& vg);
 	private:
 		std::deque<Point> mPoints;
+		BitmapGraphics::HStroke mStroke;
 		bool mOpen;
 		int minXIndex;
 		int maxXIndex;
