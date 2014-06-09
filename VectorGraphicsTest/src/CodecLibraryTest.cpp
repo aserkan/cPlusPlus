@@ -3,8 +3,8 @@
 #include "TestHarness.h"
 
 #include "CodecLibrary.h"
-//#include "BrightnessDecorator.h"
-//#include "ColorInversionDecorator.h"
+#include "BrightnessDecorator.h"
+#include "ColorInversionDecorator.h"
 #include "WindowsBitmapDecoder.h"
 #include "WindowsBitmapEncoder.h"
 #include "BitmapIterator.h"
@@ -166,7 +166,7 @@ TEST(windowsBitmapDecodeEncode, CodecLibrary)
 
 	tearDown();
 }
-/*
+
 TEST(brightnessDecoratorIterator, CodecLibrary)
 {
 	setUp();
@@ -240,4 +240,3 @@ TEST(doubleDecorator, CodecLibrary)
 
 	tearDown();
 }
-*/

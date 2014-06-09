@@ -6,8 +6,6 @@
 
 #define STR(a) #a
 
-
-
 const char* const TestXml = STR(
 	<Scene width = "800" height = "600">
 	<Layer alias = "sky">
