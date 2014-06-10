@@ -13,6 +13,9 @@ namespace VectorGraphics
 		int getX() const;
 		int getY() const;
 
+		void setX(int x);
+		void setY(int y);
+
 		bool operator==(const Point& rhs) const;
 		bool operator!=(const Point& rhs) const;
 		bool operator<(const Point& rhs) const;

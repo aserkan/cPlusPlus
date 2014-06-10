@@ -2,29 +2,29 @@
 #include "SquarePen.h"
 //#include "Point.h"
 
-
-// TODO: move this to a collection of common utility functions
-namespace
-{
-	bool inRect(const VectorGraphics::Point& p,
-		int left,
-		int upper,
-		int right,
-		int lower)
-	{
-		if (p.getX() < left || p.getX() >= right)
-		{
-			return false;
-		}
-
-		if (p.getY() < upper || p.getY() >= lower)
-		{
-			return false;
-		}
-
-		return true;
-	}
-}
+//
+//// TODO: move this to a collection of common utility functions
+//namespace
+//{
+//	bool inRect(const VectorGraphics::Point& p,
+//		int left,
+//		int upper,
+//		int right,
+//		int lower)
+//	{
+//		if (p.getX() < left || p.getX() >= right)
+//		{
+//			return false;
+//		}
+//
+//		if (p.getY() < upper || p.getY() >= lower)
+//		{
+//			return false;
+//		}
+//
+//		return true;
+//	}
+//}
 
 
 namespace BitmapGraphics
@@ -47,14 +47,17 @@ namespace BitmapGraphics
 			for (int j = 0; j < mSize; ++j)
 			{
 				p += VectorGraphics::Point(1, 0);
+				canvas->setPixelColor(p, mColor);
 
-				if ((i + j) % 2)
-				{
-					if (inRect(p, 0, 0, canvas->getWidth(), canvas->getHeight()))
-					{
-						canvas->setPixelColor(p, mColor);
-					}
-				}
+				//p += VectorGraphics::Point(1, 0);
+
+				//if ((i + j) % 2)
+				//{
+				//	if (inRect(p, 0, 0, canvas->getWidth(), canvas->getHeight()))
+				//	{
+				//		canvas->setPixelColor(p, mColor);
+				//	}
+				//}
 			}
 		}
 	}

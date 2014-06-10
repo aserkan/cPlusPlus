@@ -16,6 +16,8 @@ namespace BitmapGraphics
 	private:
 		int mSize;
 		Color mColor;
+		bool mToggle;
+		int mCount;
 	};
 
 }

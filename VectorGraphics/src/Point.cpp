@@ -10,6 +10,15 @@ namespace VectorGraphics
 	{
 		return mY;
 	}
+	void Point::setX(int x)
+	{
+		mX = x;
+	}
+	void Point::setY(int y)
+	{
+		mY = y;
+	}
+
 
 	bool Point::operator==(const Point& rhs) const
 	{

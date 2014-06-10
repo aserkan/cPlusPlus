@@ -1,4 +1,5 @@
 #include "VectorGraphic.h"
+#include "LineIterator.h"
 
 namespace VectorGraphics
 {
@@ -168,14 +169,31 @@ namespace VectorGraphics
 
 	void VectorGraphic::draw(BitmapGraphics::HCanvas hCanvas, const Point& offset)
 	{
-
-		for (auto iter = mPoints.begin(); iter != mPoints.end(); iter++)
+		auto iter = mPoints.begin();
+		while (iter != mPoints.end())
 		{
-			mStroke->createPen()->drawPoint(hCanvas, (*iter)+offset);
+			Point start = *iter, end = *iter;
+			if (++iter == mPoints.end())
+			{
+				if (isClosed()) end = *(mPoints.begin()); //connect end point to start point
+				else return; //open shape, no need to draw line
+			}
+			else end = *iter;
+			LineIterator lineIterator(start, end);
+			while (!lineIterator.isEnd())
+			{
+				mStroke->createPen()->drawPoint(hCanvas, lineIterator.getCurrentPoint() + offset);
+				lineIterator.nextPoint();
+			}
+			mStroke->createPen()->drawPoint(hCanvas, lineIterator.getEndPoint() + offset);
 
 		}
 
+		//for (auto iter = mPoints.begin(); iter != mPoints.end(); iter++)
+		//{
+		//	mStroke->createPen()->drawPoint(hCanvas, (*iter)+offset);
 
+		//}
 	}
 
 
