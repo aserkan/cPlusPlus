@@ -169,6 +169,7 @@ namespace VectorGraphics
 
 	void VectorGraphic::draw(BitmapGraphics::HCanvas hCanvas, const Point& offset)
 	{
+		BitmapGraphics::HPen hPen = mStroke->createPen();
 		auto iter = mPoints.begin();
 		while (iter != mPoints.end())
 		{
@@ -182,10 +183,10 @@ namespace VectorGraphics
 			LineIterator lineIterator(start, end);
 			while (!lineIterator.isEnd())
 			{
-				mStroke->createPen()->drawPoint(hCanvas, lineIterator.getCurrentPoint() + offset);
+				hPen->drawPoint(hCanvas, lineIterator.getCurrentPoint() + offset);
 				lineIterator.nextPoint();
 			}
-			mStroke->createPen()->drawPoint(hCanvas, lineIterator.getEndPoint() + offset);
+			hPen->drawPoint(hCanvas, lineIterator.getEndPoint() + offset);
 
 		}
 
